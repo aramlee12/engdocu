@@ -1,51 +1,55 @@
-# Pine 
+## Mermaid library
 
-
-
->def total
-
-Use `git status` to list all new or modified files that haven't yet been committed.
-
-Some basic Git commands are:
-```
-git status
-git add
-git commit
+```mermaid
+graph TD;
+A(START) --> B(Check temperature);
+B-->C(Is the roo hot?)
+C-->|Yes|D(Turn on Air conditioner)
+C-->|No|E(Turn off Air conditioner)
 ```
 
-# Example headings
+```mermaid
+gantt
+    title A Gantt Diagram
+    dateFormat YYYY-MM-DD
+    section Section
+        A task          :a1, 2014-01-01, 30d
+        Another task    :after a1, 20d
+    section Another
+        Task in Another :2014-01-12, 12d
+        another task    :24d
+```
 
-## Sample Section
+# MatJax
+$$\ lambda = \frac {v}{f}$$
 
-## This'll be a _Helpful_ Section About the Greek Letter Θ!
-A heading containing characters not allowed in fragments, UTF-8 characters, two consecutive spaces between the first and second words, and formatting.
+# vega-lite
+```vega-lite
+{
+  "mark": "line",
+  "data": {
+    "url": "simple.csv"
+  },
+  "encoding": {
+    "x": {
+      "field": "time(s)",
+      "type": "quantitative"
+    },
+    "y": {
+      "field": "distance(m)",
+      "type": "quantitative"
+    } 
+  }
+}
+```
+also check out vega project
 
-## This heading is not unique in the file
+# sequence diagram
 
-TEXT 1
-
-## This heading is not unique in the file
-
-TEXT 2
-
-# Links to the example headings above
-
-Link to the sample section: [Link Text](#sample-section).
-
-Link to the helpful section: [Link Text](#thisll--be-a-helpful-section-about-the-greek-letter-Θ).
-
-Link to the first non-unique section: [Link Text](#this-heading-is-not-unique-in-the-file).
-
-Link to the second non-unique section: [Link Text](#this-heading-is-not-unique-in-the-file-1).
-
-
-<script src="webfont.js"></script>
-<script src="snap.svg-min.js"></script>
-<script src="underscore-min.js"></script>
-<script src="sequence-diagram-min.js"></script>
-
-<div id="diagram"></div>
-<script>
-  var diagram = Diagram.parse("A->B: Message");
-  diagram.drawSVG("diagram", {theme: 'hand'});
-</script>
+```mermaid
+  sequenceDiagram
+  MCU->>Sensor: Start
+  MCU->>Sensor: Slave address
+  Sensor->>MCU: Ack
+  MCU->>Sensor: Data
+  ```
