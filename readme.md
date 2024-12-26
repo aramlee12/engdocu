@@ -1,29 +1,32 @@
 ## Mermaid library
 
+
+### Flow Diagram<!-- Flow diagram -->
 ```mermaid
-graph TD;
+graph LR;
 A(START) --> B(Check temperature);
 B-->C(Is the roo hot?)
 C-->|Yes|D(Turn on Air conditioner)
 C-->|No|E(Turn off Air conditioner)
 ```
 
+### Gantt Chart<!-- Gantt Chart -->
 ```mermaid
 gantt
-    title A Gantt Diagram
+    title Aram's project schedule
     dateFormat YYYY-MM-DD
-    section Section
-        A task          :a1, 2014-01-01, 30d
-        Another task    :after a1, 20d
-    section Another
-        Task in Another :2014-01-12, 12d
-        another task    :24d
+    section Feasibility
+        Planning          :a1, 2014-01-01, 30d
+        Brainstorming    :after a1, 20d
+    section Initial prototype
+        Initial Design :2014-01-12, 12d
+        Prototype    :24d
 ```
 
-# MatJax
+## MatJax
 $$\ lambda = \frac {v}{f}$$
 
-# vega-lite
+## vega-lite
 ```vega-lite
 {
   "mark": "line",
