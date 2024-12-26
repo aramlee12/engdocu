@@ -5,9 +5,14 @@
 ```mermaid
 graph LR;
 A(START) --> B(Check temperature);
-B-->C(Is the roo hot?)
+B-->C{Is the room hot?}
 C-->|Yes|D(Turn on Air conditioner)
 C-->|No|E(Turn off Air conditioner)
+
+classDef whiteBackground fill:#FFFFFF,color:#000,stroke-width:0px;
+linkStyle 0,1 stroke:#000,stroke-width:2px;
+class Yes whiteBackground;
+class No whiteBackground;
 ```
 
 ### Gantt Chart<!-- Gantt Chart -->
